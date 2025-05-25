@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+  <!-- Background -->
+  <rect width="500" height="300" rx="15" fill="#f5f9f2"/>
+  
+  <!-- Animations -->
+  <defs>
+    <!-- Pulse animation for the plant -->
+    <animate id="leafGrow" attributeName="scale" from="0.95" to="1.05" dur="3s" begin="0s" repeatCount="indefinite" />
+    
+    <!-- Data flow animation -->
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2b88d9">
+        <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="25%" stop-color="#6ad486">
+        <animate attributeName="offset" values="0.25;1.25" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <!-- Running animation keyframes -->
+    <path id="runPath" d="M50,250 C100,230 150,280 200,250 S250,220 300,250 S350,280 400,250 S450,220 500,250" fill="none" />
+  </defs>
+  
+  <!-- Main Text -->
+  <text x="250" y="170" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#1e7c3c">Buddy4Plant</text>
+  
+  <!-- Plant Icon with animation -->
+  <g transform="translate(180, 60) scale(0.8)">
+    <!-- Stem -->
+    <path d="M85 130 Q85 80 85 50" stroke="#3ca656" stroke-width="6" fill="none">
+      <animate attributeName="d" values="M85 130 Q85 80 85 50; M85 130 Q83 80 85 50; M85 130 Q87 80 85 50; M85 130 Q85 80 85 50" dur="4s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Leaves with growth animation -->
+    <path d="M85 90 Q120 70 140 90" stroke="#3ca656" stroke-width="5" fill="#6ad486">
+      <animate attributeName="d" values="M85 90 Q120 70 140 90; M85 90 Q125 65 145 85; M85 90 Q120 70 140 90" dur="3s" repeatCount="indefinite" />
+    </path>
+    <path d="M85 70 Q50 50 30 70" stroke="#3ca656" stroke-width="5" fill="#6ad486">
+      <animate attributeName="d" values="M85 70 Q50 50 30 70; M85 70 Q45 45 25 65; M85 70 Q50 50 30 70" dur="3.5s" repeatCount="indefinite" />
+    </path>
+    <path d="M85 110 Q120 90 150 100" stroke="#3ca656" stroke-width="5" fill="#6ad486">
+      <animate attributeName="d" values="M85 110 Q120 90 150 100; M85 110 Q125 85 155 95; M85 110 Q120 90 150 100" dur="4s" repeatCount="indefinite" />
+    </path>
+    <path d="M85 50 Q50 30 30 50" stroke="#3ca656" stroke-width="5" fill="#6ad486">
+      <animate attributeName="d" values="M85 50 Q50 30 30 50; M85 50 Q45 25 25 45; M85 50 Q50 30 30 50" dur="3.2s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Digital Elements with animation -->
+  <g transform="translate(270, 75)">
+    <!-- Screen/Device -->
+    <rect x="0" y="0" width="60" height="45" rx="5" fill="#2b88d9" stroke="#0f5a9c" stroke-width="2"/>
+    
+    <!-- Animated Screen Content -->
+    <line x1="10" y1="10" x2="50" y2="10" stroke="#ffffff" stroke-width="2">
+      <animate attributeName="x2" values="40;50;40" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="10" y1="20" x2="40" y2="20" stroke="#ffffff" stroke-width="2">
+      <animate attributeName="x2" values="30;40;30" dur="2s" repeatCount="indefinite" />
+    </line>
+    <line x1="10" y1="30" x2="50" y2="30" stroke="#ffffff" stroke-width="2">
+      <animate attributeName="x2" values="50;40;50" dur="2s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Data Flow Line -->
+    <path d="M0 20 L-25 60" stroke="url(#dataGradient)" stroke-width="2"/>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="250" y="205" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#555555">Smart Farming Solutions for Better Yields</text>
+  
+  <!-- Running Elements -->
+  <g>
+    <!-- Animated running dots representing data flow -->
+    <circle cx="0" cy="0" r="5" fill="#3ca656">
+      <animateMotion dur="7s" repeatCount="indefinite" path="M50,240 C100,230 150,250 200,240 S250,230 300,240 S350,250 400,240 S450,230 475,240" />
+    </circle>
+    <circle cx="0" cy="0" r="4" fill="#2b88d9">
+      <animateMotion dur="5s" repeatCount="indefinite" begin="0.5s" path="M75,245 C125,235 175,255 225,245 S275,235 325,245 S375,255 425,245" />
+    </circle>
+    <circle cx="0" cy="0" r="3" fill="#6ad486">
+      <animateMotion dur="6s" repeatCount="indefinite" begin="1s" path="M100,250 C150,240 200,260 250,250 S300,240 350,250 S400,260 450,250" />
+    </circle>
+  </g>
+  
+  <!-- Decorative Elements with pulse -->
+  <circle cx="130" cy="230" r="10" fill="#6ad486" opacity="0.6">
+    <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="370" cy="230" r="10" fill="#6ad486" opacity="0.6">
+    <animate attributeName="r" values="10;12;10" dur="3.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="150" cy="250" r="6" fill="#3ca656" opacity="0.8">
+    <animate attributeName="r" values="6;8;6" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="350" cy="250" r="6" fill="#3ca656" opacity="0.8">
+    <animate attributeName="r" values="6;8;6" dur="4.5s" repeatCount="indefinite" />
+  </circle>
+</svg>

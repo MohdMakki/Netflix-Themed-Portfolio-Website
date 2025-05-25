@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f5f5f7" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" fill="#333" text-anchor="middle" font-weight="bold">Searching Visualization</text>
+  <text x="400" y="70" font-family="Arial" font-size="16" fill="#666" text-anchor="middle">Linear vs Binary Search</text>
+  
+  <!-- Array elements for Linear Search -->
+  <rect x="100" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="linearSearch1" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="linearStart.begin" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#6495ED" dur="0.5s" begin="linearSearch1.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="125" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">7</text>
+  
+  <rect x="160" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="linearSearch2" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="linearSearch1.end" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#6495ED" dur="0.5s" begin="linearSearch2.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="185" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">12</text>
+  
+  <rect x="220" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="linearSearch3" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="linearSearch2.end" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#6495ED" dur="0.5s" begin="linearSearch3.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="245" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">19</text>
+  
+  <rect x="280" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="linearSearch4" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="linearSearch3.end" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#6495ED" dur="0.5s" begin="linearSearch4.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="305" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">23</text>
+  
+  <rect x="340" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="linearSearch5" attributeName="fill" from="#6495ED" to="#4CAF50" dur="0.5s" begin="linearSearch4.end" fill="freeze"/>
+  </rect>
+  <text x="365" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">28</text>
+  
+  <!-- Linear Search Label -->
+  <text x="220" y="200" font-family="Arial" font-size="18" fill="#333" text-anchor="middle" font-weight="bold">Linear Search</text>
+  <text x="220" y="220" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Checking each element sequentially</text>
+  <text x="220" y="240" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Target: 28</text>
+  
+  <!-- Array elements for Binary Search -->
+  <rect x="450" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="binaryMid1" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="binaryStart.begin" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#6495ED" dur="0.5s" begin="binaryMid1.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="475" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">7</text>
+  
+  <rect x="510" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="binaryMid2" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="binaryMid1.end+1s" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#6495ED" dur="0.5s" begin="binaryMid2.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="535" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">12</text>
+  
+  <rect x="570" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate id="binaryMid3" attributeName="fill" from="#6495ED" to="#FF6347" dur="0.5s" begin="binaryMid2.end+1s" fill="freeze"/>
+    <animate attributeName="fill" from="#FF6347" to="#4CAF50" dur="0.5s" begin="binaryMid3.end+0.5s" fill="freeze"/>
+  </rect>
+  <text x="595" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">19</text>
+  
+  <rect x="630" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate attributeName="fill" from="#6495ED" to="#6495ED" dur="0.01s" begin="binaryMid3.end+1s" fill="freeze"/>
+  </rect>
+  <text x="655" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">23</text>
+  
+  <rect x="690" y="120" width="50" height="50" fill="#6495ED" rx="5" ry="5" stroke="#333" stroke-width="1">
+    <animate attributeName="fill" from="#6495ED" to="#6495ED" dur="0.01s" begin="binaryMid3.end+1s" fill="freeze"/>
+  </rect>
+  <text x="715" y="150" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle">28</text>
+  
+  <!-- Binary Search Label -->
+  <text x="570" y="200" font-family="Arial" font-size="18" fill="#333" text-anchor="middle" font-weight="bold">Binary Search</text>
+  <text x="570" y="220" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Divide and conquer approach</text>
+  <text x="570" y="240" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Target: 19</text>
+  
+  <!-- Legend -->
+  <rect x="300" y="280" width="20" height="20" fill="#6495ED" rx="3" ry="3"/>
+  <text x="330" y="295" font-family="Arial" font-size="14" fill="#333">Unsearched</text>
+  
+  <rect x="400" y="280" width="20" height="20" fill="#FF6347" rx="3" ry="3"/>
+  <text x="430" y="295" font-family="Arial" font-size="14" fill="#333">Checking</text>
+  
+  <rect x="500" y="280" width="20" height="20" fill="#4CAF50" rx="3" ry="3"/>
+  <text x="530" y="295" font-family="Arial" font-size="14" fill="#333">Found</text>
+  
+  <!-- Animation Controls -->
+  <rect x="300" y="320" width="90" height="30" fill="#4285F4" rx="5" ry="5">
+    <animate id="linearStart" attributeName="fill" from="#4285F4" to="#4285F4" dur="0.01s" begin="0s;linearReset.end+1s" fill="freeze"/>
+  </rect>
+  <text x="345" y="340" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">Linear</text>
+  
+  <rect x="410" y="320" width="90" height="30" fill="#4285F4" rx="5" ry="5">
+    <animate id="binaryStart" attributeName="fill" from="#4285F4" to="#4285F4" dur="0.01s" begin="0.5s;binaryReset.end+1s" fill="freeze"/>
+  </rect>
+  <text x="455" y="340" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">Binary</text>
+  
+  <animate id="linearReset" attributeName="fill" from="#fff" to="#fff" dur="0.01s" begin="linearSearch5.end+2s" fill="freeze"/>
+  <animate id="binaryReset" attributeName="fill" from="#fff" to="#fff" dur="0.01s" begin="binaryMid3.end+3s" fill="freeze"/>
+  
+  <!-- Complexity Information -->
+  <text x="220" y="370" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Time Complexity: O(n)</text>
+  <text x="570" y="370" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Time Complexity: O(log n)</text>
+</svg>
